@@ -11,6 +11,13 @@ contract Voting{
     function voteForOption(uint optionIndex) public {
         option[optionIndex].voteCount +=1;
     }
+    
+    constructor() {
+        // Add options to the array statically
+        option.push(Option({name: "Option A", voteCount: 0}));
+        option.push(Option({name: "Option B", voteCount: 0}));
+        option.push(Option({name: "Option C", voteCount: 0}));
+    }
 
     
 }
